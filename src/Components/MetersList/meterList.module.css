@@ -1,0 +1,16 @@
+.meterList {
+    width: 100%;
+    overflow: auto;
+    height: 80vh;
+}
+
+.meterList::-webkit-scrollbar {
+    width: 4px;
+    background-color: rgba(248, 249, 250, 1);
+}
+
+.meterList::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: rgba(94, 102, 116, 1);
+    border-radius: 5px;
+}
