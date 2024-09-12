@@ -14,6 +14,7 @@ export const Meter = ({meter, i}) => {
 
     const delMeter = () => {
         MeterStore.deleteMeter(meter.id)
+        MeterStore.setMeterPage(1)
     }
 
     return (

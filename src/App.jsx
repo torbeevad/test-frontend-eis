@@ -2,10 +2,16 @@ import './App.css';
 import React, {useEffect} from 'react';
 import {observer} from "mobx-react-lite";
 import {MeterList} from "./Components/MetersList/MeterList";
-import AreasStore from "./stores/AreasStore";
+import MeterStorex from "./stores/meters";
+import useStore from "./hooks/useStore";
 import MeterStore from "./stores/MeterStore";
+import AreasStore from "./stores/AreasStore";
+import {Paginator} from "./Components/Paginator/Paginator";
 
 const App = observer(() => {
+
+    const {metersx} = useStore(MeterStorex);
+    console.log(metersx)
 
     useEffect(() => {
         Promise.all([MeterStore.getFetchMetersData(), AreasStore.getFetchAreasData()])
@@ -25,13 +31,8 @@ const App = observer(() => {
                     <span>Примечания</span>
                 </div>
                 <MeterList/>
-                <div className="paginator">
-                    <button onClick={MeterStore.firstPage}>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                </div>
+                <Paginator/>
             </main>
-
         </div>
     )
 })

@@ -9,7 +9,7 @@ export const MeterList = observer(() => {
 
     return (
         <ul className={styles.meterList}>
-            {MeterStore.meters.map((meter, i) => <Meter meter={meter} i={i} key={meter.id} />)}
+            {MeterStore.meterPages?.map((meter, i) => <Meter meter={meter} i={i} key={meter.id} />)}
         </ul>
     )
 })

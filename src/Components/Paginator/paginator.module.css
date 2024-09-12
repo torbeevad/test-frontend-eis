@@ -1,0 +1,14 @@
+.paginator {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 32px;
+    padding: 0 16px;
+    gap: 5px;
+}
+
+.paginator button {
+    width: 24px;
+    height: 24px;
+}
